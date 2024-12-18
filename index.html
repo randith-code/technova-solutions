@@ -39,6 +39,20 @@
           </ul>
           <a href="#contact"><button class="primary-button">Contact</button></a>
         </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="2"
+          stroke="currentColor"
+          class="hamberger-menu"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+          />
+        </svg>
       </nav>
     </header>
 
@@ -302,7 +316,10 @@
         <section class="footer-info">
           <!-- conpany info -->
           <div class="company-info">
-            <img src="/assets/images/" alt="technova logo white" />
+            <img
+              src="/assets/images/logo-white.svg"
+              alt="technova logo white"
+            />
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
@@ -469,6 +486,46 @@
         </section>
       </div>
     </footer>
+
+    <section class="mobile-menu">
+      <div class="mobile-menu-container">
+        <span class="close-button-container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="{1.5}"
+            stroke="currentColor"
+            class="close-button"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </span>
+        <div class="mobile-menu-content">
+          <a href="#home" class="mobile-logo"
+            ><img src="/assets/images/logo-primary.svg" alt="technova logo" />
+            <p class="company-name">TechNova Solutions</p>
+          </a>
+          <hr />
+          <div class="mobile-nav-link-container">
+            <ul class="mobile-nav-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#testamonials">Testimonials</a></li>
+            </ul>
+            <hr />
+            <a href="#contact"
+              ><button class="primary-button">Contact</button></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- JavaScript -->
     <script src="assets/js/script.js" defer></script>
