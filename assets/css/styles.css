@@ -373,6 +373,23 @@ header {
   fill: var(--secondary-color);
 }
 
+/* Testimonials section */
+.testimonials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  padding: 5rem 0 5rem 0;
+}
+
+.testimonials .container {
+  flex-direction: column;
+  align-items: center;
+  max-width: none;
+  width: 100%;
+  gap: 2rem;
+}
+
 /* Contact Section */
 .contact {
   display: flex;
