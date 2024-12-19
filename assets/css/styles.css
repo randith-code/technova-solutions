@@ -472,41 +472,45 @@ footer {
   justify-content: center;
   width: 100vw;
   padding: 5rem 0 1rem 0;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-background);
   color: var(--secondary-color);
 }
 
 footer .container {
+  max-width: none;
+  width: 100%;
   flex-direction: column;
+  align-items: center;
+  color: var(--text-color);
+  gap: 2rem;
 }
 
-.footer-info {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  padding-bottom: 1rem;
+.footer-description {
+  width: 90%;
+  text-align: center;
 }
 
-.quick-links,
-.footer-services,
 .footer-contacts {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
+  padding-bottom: 2rem;
 }
 
-.quick-links h3,
-.footer-services h3,
 .footer-contacts h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-color);
 }
 
-.footer-contacts ul,
-.quick-links ul,
-.footer-services ul {
+.footer-contacts ul {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  gap: 5rem;
+}
+
+.footer-contacts ul li a svg {
+  stroke: var(--text-color);
 }
 
 .footer-contacts ul li a {
@@ -515,18 +519,51 @@ footer .container {
   gap: 1rem;
 }
 
+.footer-image {
+  position: absolute;
+  right: 20vw;
+  max-width: 300px;
+}
+
+.footer-inner-container {
+  position: relative;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
 .company-info {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
+  position: relative;
+  z-index: 25;
+}
+
+.company-info hr,
+.social-media-container hr {
+  flex: 1 1 0%;
+  height: 4px;
+  background-color: var(--primary-color);
 }
 
 .company-info img {
-  width: 100px;
+  width: 50px;
 }
 
 .company-info p {
-  width: 50%;
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.social-media-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .social-media-icons {
@@ -535,12 +572,18 @@ footer .container {
   gap: 1rem;
 }
 
+.social-media-icons a {
+  display: flex;
+  align-items: center;
+}
+
 .copy-right-text {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 2rem 0 0 0;
-  border-top: 1px solid var(--secondary-color);
+  padding: 1rem 0 0 0;
+  color: var(--primary-color);
+  margin-top: -2rem;
 }
 
 .mobile-menu {
@@ -588,10 +631,19 @@ footer .container {
     stroke-width: 1.8px;
   }
 
-  .hero {
-    padding: 10rem 0 6rem 0;
+  .hero .container {
+    flex-direction: column;
   }
 
+  .hero .container .left-inner-section {
+    align-items: center;
+    padding: 8rem 0rem 6rem 0rem;
+  }
+
+  .hero .container .right-inner-section {
+    align-items: center;
+    padding: 8rem 0rem 6rem 0rem;
+  }
   .hero-description {
     width: 85%;
     gap: 1.5rem;
@@ -622,13 +674,80 @@ footer .container {
     gap: 3rem;
   }
 
-  .footer-info {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+  .footer-description {
+    width: 90%;
+    text-align: center;
+  }
+
+  .footer-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .footer-contacts h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-color);
+  }
+
+  .footer-contacts ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-contacts ul li a svg {
+    stroke: var(--text-color);
+  }
+
+  .footer-contacts ul li a {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+  }
+
+  .footer-image {
+    transform: translateY(3rem);
+  }
+
+  .company-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .company-info hr,
+  .social-media-container hr {
+    flex: 1 1 0%;
+    height: 4px;
+    background-color: var(--primary-color);
+  }
+
+  .company-info img {
+    width: 25px;
   }
 
   .company-info p {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+
+  .social-media-container {
     width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .social-media-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 
   .social-media-icons {
@@ -739,14 +858,16 @@ footer .container {
     stroke-width: 1.8px;
   }
 
-  .hero {
-    padding: 10rem 0 6rem 0;
+  .hero .container {
+    flex-direction: column;
   }
 
-  .hero {
-    flex-direction: column;
-    padding: 10rem 0 8rem 0;
-    height: auto;
+  .hero .container .left-inner-section {
+    padding: 6rem 0 5rem 0;
+  }
+
+  .hero .container .right-inner-section {
+    padding: 6rem 0 5rem 0;
   }
 
   .hero-description {
@@ -803,15 +924,96 @@ footer .container {
     width: 100%;
   }
 
-  .footer-info {
-    grid-template-columns: 1fr;
+  footer .container {
+    width: 100% !important;
+    padding: 0px !important;
+  }
+
+  .footer-description {
+    width: 90%;
+    text-align: center;
+  }
+
+  .footer-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    width: 90%;
+  }
+
+  .footer-inner-container {
+    background-color: transparent;
+    width: 90%;
+  }
+
+  .footer-image {
+    bottom: 0px;
+  }
+
+  .footer-contacts h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-color);
+  }
+
+  .footer-contacts ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-contacts ul li a svg {
+    stroke: var(--text-color);
+  }
+
+  .footer-contacts ul li a {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+  }
+
+  .company-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
     gap: 1.5rem;
   }
 
-  .company-info p {
-    width: 100%;
+  .company-info hr,
+  .social-media-container hr {
+    flex: 1 1 0%;
+    height: 4px;
+    background-color: var(--primary-color);
   }
 
+  .company-info img {
+    width: 25px;
+  }
+
+  .company-info p {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+
+  .social-media-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .social-media-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .social-media-icons {
+    justify-content: center;
+  }
   .social-media-icons {
     justify-content: center;
   }
