@@ -949,7 +949,7 @@ footer .container {
   }
 
   .footer-image {
-    bottom: 0px;
+    display: none;
   }
 
   .footer-contacts h3 {
